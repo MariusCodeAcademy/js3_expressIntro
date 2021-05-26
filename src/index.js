@@ -17,6 +17,12 @@ const aboutPath = path.join(__dirname, 'html', 'about.html');
 // app.get('/', (req, res) => res.sendFile(indexPath));
 // app.get('/about', (req, res) => res.sendFile(aboutPath));
 
+// our api
+app.get('/api/people', (req, res) => {
+  // grazinam json
+  res.json(people);
+});
+
 // kai turim papke kurios failus norim pasiekti is narsykles pagal pavadinimas
 // nustatom static papke.
 // app.use(express.static(htmlPath));
