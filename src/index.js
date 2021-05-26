@@ -22,6 +22,19 @@ app.get('/api/people', (req, res) => {
   // grazinam json
   res.json(people);
 });
+// get one people
+app.get('/api/person/:id', (req, res) => {
+  const paramId = req.params.id;
+
+  const found = people.find((p) => p.id === paramId);
+
+  if (!found) {
+    res.status(404).json({ errorMsg: `sorry person with id ${paramId} was not found` });
+  }
+
+  // grazinam json
+  res.json(found);
+});
 
 // kai turim papke kurios failus norim pasiekti is narsykles pagal pavadinimas
 // nustatom static papke.
