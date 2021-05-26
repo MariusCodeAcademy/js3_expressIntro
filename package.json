@@ -1,0 +1,29 @@
+{
+  "name": "expressintro",
+  "version": "1.0.0",
+  "description": "We start making back end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariusCodeAcademy/js3_expressIntro.git"
+  },
+  "keywords": [
+    "express",
+    "node"
+  ],
+  "author": "M.K.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MariusCodeAcademy/js3_expressIntro/issues"
+  },
+  "homepage": "https://github.com/MariusCodeAcademy/js3_expressIntro#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
