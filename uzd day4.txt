@@ -24,3 +24,9 @@ gauti duomenis is '/api/cars' ir atrinkti tik pirmas 3 masinas
 
 8. iskelti loggerio funkcija i atskira middleware faila
 
+9. prie rikiuoto saraso elementu prideti edit ir delete mygtukus 
+
+10. padaryti kad delete mygtukas istrintu elementa siusdamas delete uzklausa i api
+
+11. padaryti kad edit mygtukas is karto supildytu formos laukus su to asmens 
+duomenimis ir galetume pataise laukus juos atnaujinti su api PUT uzklausa
