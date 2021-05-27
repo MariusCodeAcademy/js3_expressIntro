@@ -1,0 +1,26 @@
+1. index.html sukuriam forma
+
+2. input el name, surname, select, male/female, checkbox married
+
+3. atspausdinti esamus asmenis gautus su fetch is musu api 
+rikiuoto saraso pavidalu
+//3.1 gauti duomenis i konsole
+3.2 gautus duomenis panaudoti cikle kuris sugeneruoja mums sarasa su duomenimis
+    id: '1',
+    name: 'Jonas',
+    surname: 'Jonaitis',
+    sex: 'male',
+    age: 26,
+    married: false,
+
+4. forma turi tureti siek tiek stiliaus kad nebadytu akiu
+
+5. extra js scripta gauti visus formos ivesties duomenis
+
+6. Refactorinti peopleApi.js faila kad butu kuo maziau pasikartojancio kodo
+
+7. fronte index.html prisijungti js faila ir jame aprasyti kad 
+gauti duomenis is '/api/cars' ir atrinkti tik pirmas 3 masinas
+
+8. iskelti loggerio funkcija i atskira middleware faila
+
