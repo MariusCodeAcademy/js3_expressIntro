@@ -27,13 +27,31 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   console.log(' This is what was set to server in body', req.body); //{ name: 'James', surname: 'Jameson' }
   // prideti nauja people objekta
+
   const newPerson = {
     id: (++personId).toString(),
     name: req.body.name,
     surname: req.body.surname,
   };
+
   people.push(newPerson);
   res.json(people);
+});
+
+// edit one peope Endpoint
+router.put('/:id', (req, res) => {
+  console.log('executing put request');
+  const paramId = req.params.id;
+
+  const found = people.find((p) => p.id === paramId);
+  if (!found) {
+    res.status(404).json({ errorMsg: `sorry person with id ${paramId} was not found` });
+  }
+
+  // atnjaujinti zmongu
+  found.name = req.body.name;
+  found.surname = req.body.surname;
+  res.json({ msg: 'User was updated', updatedUser: found });
 });
 
 module.exports = router;
