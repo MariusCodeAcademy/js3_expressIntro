@@ -17,7 +17,7 @@
       // get people fetch
       document.getElementById('ppl').addEventListener('click', () => {
         console.log('click');
-        fetch('http://localhost:3000/api/people')
+        fetch('/api/people')
           .then((resp) => resp.json())
           .then((data) => console.log(' data', data))
           .catch((err) => console.error(err.message));
@@ -28,14 +28,14 @@
         fetch('/api/people', {
           method: 'POST',
           body: JSON.stringify({
-            name: 'James',
-            surname: 'Jameson',
+            name: 'Mike',
+            surname: 'Tyson',
           }),
           headers: {
             'Content-type': 'application/json; charset=UTF-8',
           },
         })
-          .then((resp) => resp.text())
+          .then((resp) => resp.json())
           .then((data) => console.log(' data post rq', data))
           .catch((err) => console.error(err.message));
       });
