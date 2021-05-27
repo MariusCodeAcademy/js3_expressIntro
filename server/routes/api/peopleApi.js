@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 let personId = 6;
-const people = require('../../js/peopleData');
+let people = require('../../js/peopleData');
 
 // get all people Endpoint
 router.get('/', (req, res) => {
@@ -54,6 +54,24 @@ router.put('/:id', (req, res) => {
   found.surname = surname ? surname : found.surname;
 
   res.json({ msg: 'User was updated', updatedUser: found });
+});
+
+// delete one people Endpoint
+router.delete('/:id', (req, res) => {
+  const paramId = req.params.id;
+  // randam ka norima istrinti pagal id
+  const found = people.find((p) => p.id === paramId);
+
+  if (!found) {
+    res.status(404).json({ errorMsg: `sorry person with id ${paramId} was not found` });
+  }
+
+  // paliekam visus objektus masyve iskyrus ta kuri radom
+  // const leftPeopleAfterDelete = people.filter((p) => p.id !== paramId);
+  people = people.filter((p) => p !== found);
+
+  // grazinam json
+  res.json({ msg: 'delete success', deletePerson: found, leftPeopleAfterDelete: people });
 });
 
 module.exports = router;

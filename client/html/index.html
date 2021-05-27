@@ -24,12 +24,9 @@
       });
       // send post data fetch json
       document.getElementById('send-data').addEventListener('click', () => {
-        console.log('sending post data');
-        fetch('/api/people/1', {
-          method: 'PUT',
-          body: JSON.stringify({
-            name: 'Mike',
-          }),
+        console.log('deleting post data');
+        fetch('/api/people/2', {
+          method: 'DELETE',
           headers: {
             'Content-type': 'application/json; charset=UTF-8',
           },
