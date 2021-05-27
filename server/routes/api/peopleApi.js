@@ -4,10 +4,7 @@ let personId = 6;
 let people = require('../../js/peopleData');
 
 // get all people Endpoint
-router.get('/', (req, res) => {
-  // grazinam json
-  res.json(people);
-});
+router.get('/', (req, res) => res.json(people));
 // get one people Endpoint
 router.get('/:id', (req, res) => {
   const paramId = req.params.id;
