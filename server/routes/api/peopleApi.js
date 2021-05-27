@@ -48,9 +48,11 @@ router.put('/:id', (req, res) => {
     res.status(404).json({ errorMsg: `sorry person with id ${paramId} was not found` });
   }
 
+  const { name, surname } = req.body;
   // atnjaujinti zmongu
-  found.name = req.body.name;
-  found.surname = req.body.surname;
+  found.name = name || found.name;
+  found.surname = surname ? surname : found.surname;
+
   res.json({ msg: 'User was updated', updatedUser: found });
 });
 
