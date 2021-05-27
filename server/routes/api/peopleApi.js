@@ -29,10 +29,13 @@ router.post('/', (req, res) => {
     id: (++personId).toString(),
     name: req.body.name,
     surname: req.body.surname,
+    gender: req.body.gender,
+    isMarried: req.body.ismarried,
   };
 
   people.push(newPerson);
-  res.json(people);
+  // res.json(people);
+  res.redirect('/');
 });
 
 // edit one peope Endpoint
