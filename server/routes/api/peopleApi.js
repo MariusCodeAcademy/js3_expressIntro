@@ -26,6 +26,11 @@ router.post('/', (req, res) => {
   // prideti nauja people objekta
   // if (req.body.ismarried) const el = true
 
+  if (!req.body.name) {
+    res.redirect('/?errorName=true');
+    return;
+  }
+
   const newPerson = {
     id: (++personId).toString(),
     name: req.body.name,
@@ -33,9 +38,10 @@ router.post('/', (req, res) => {
     sex: req.body.gender,
     married: req.body.ismarried,
   };
-
+  // res.json({ error: 'please fill in fields' });
   people.push(newPerson);
   // res.json(people);
+
   res.redirect('/');
 });
 

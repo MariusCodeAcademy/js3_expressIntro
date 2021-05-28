@@ -26,11 +26,12 @@
     <form action="/api/people" method="POST">
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" name="name" id="name" value="James" />
+        <input type="text" class="form-control" name="name" id="name" />
+        <span class="invalid-feedback">Please enter a name</span>
       </div>
       <div class="form-group">
         <label for="surname">Surname</label>
-        <input type="text" class="form-control" name="surname" id="surname" value="Brown" />
+        <input type="text" class="form-control" name="surname" id="surname" />
       </div>
       <select name="gender" class="custom-select" required>
         <!-- <option selected>Select one</option> -->
@@ -43,5 +44,7 @@
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+    <h2 class="my-4 display-4">Our People</h2>
   </body>
 </html>
