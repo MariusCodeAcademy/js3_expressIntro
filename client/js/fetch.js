@@ -11,15 +11,15 @@ export function fetchGet(url, successCallback) {
 //fetchGet('/api/people', (data) => console.log(data))
 
 // send post data fetch json
-// document.getElementById('send-data').addEventListener('click', () => {
-//   console.log('deleting post data');
-//   fetch('/api/people/2', {
-//     method: 'DELETE',
-//     headers: {
-//       'Content-type': 'application/json; charset=UTF-8',
-//     },
-//   })
-//     .then((resp) => resp.json())
-//     .then((data) => console.log(' data post rq', data))
-//     .catch((err) => console.error(err.message));
-// });
+export function sendFetchData(url, dataToSend, successCallback) {
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: dataToSend,
+  })
+    .then((resp) => resp.json())
+    .then((data) => successCallback(data))
+    .catch((err) => console.error(err.message));
+}

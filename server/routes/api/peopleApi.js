@@ -27,7 +27,7 @@ router.post('/', (req, res) => {
   // if (req.body.ismarried) const el = true
 
   if (!req.body.name) {
-    res.redirect('/?errorName=true');
+    res.status(400).json({ error: 'please enter a name' });
     return;
   }
 
@@ -40,9 +40,7 @@ router.post('/', (req, res) => {
   };
   // res.json({ error: 'please fill in fields' });
   people.push(newPerson);
-  // res.json(people);
-
-  res.redirect('/');
+  res.json({ msg: 'success', people });
 });
 
 // edit one peope Endpoint

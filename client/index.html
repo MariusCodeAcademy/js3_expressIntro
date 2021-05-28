@@ -18,12 +18,11 @@
     <h1>Express</h1>
     <a href="/about.html">about</a>
     <!-- <a href="/api/people">people api</a>
-    
     < id="send-data">send Data</> -->
     <button class="btn btn-outline-info" id="ppl">Get people</button>
 
     <h2 class="display-4">Add new person</h2>
-    <form action="/api/people" method="POST">
+    <form id="add-user-form" action="/api/people" method="POST">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" name="name" id="name" />
