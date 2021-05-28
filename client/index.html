@@ -12,13 +12,15 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/main.css" type="text/css" />
+    <script src="js/client.js" type="module" defer></script>
   </head>
   <body class="container mt-3">
     <h1>Express</h1>
     <a href="/about.html">about</a>
     <!-- <a href="/api/people">people api</a>
-    <button id="ppl">Get people</button>
-    <button id="send-data">send Data</button> -->
+    
+    < id="send-data">send Data</> -->
+    <button class="btn btn-outline-info" id="ppl">Get people</button>
 
     <h2 class="display-4">Add new person</h2>
     <form action="/api/people" method="POST">
@@ -41,29 +43,5 @@
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-
-    <script>
-      // get people fetch
-      // document.getElementById('ppl').addEventListener('click', () => {
-      //   console.log('click');
-      //   fetch('/api/people')
-      //     .then((resp) => resp.json())
-      //     .then((data) => console.log(' data', data))
-      //     .catch((err) => console.error(err.message));
-      // });
-      // send post data fetch json
-      // document.getElementById('send-data').addEventListener('click', () => {
-      //   console.log('deleting post data');
-      //   fetch('/api/people/2', {
-      //     method: 'DELETE',
-      //     headers: {
-      //       'Content-type': 'application/json; charset=UTF-8',
-      //     },
-      //   })
-      //     .then((resp) => resp.json())
-      //     .then((data) => console.log(' data post rq', data))
-      //     .catch((err) => console.error(err.message));
-      // });
-    </script>
   </body>
 </html>

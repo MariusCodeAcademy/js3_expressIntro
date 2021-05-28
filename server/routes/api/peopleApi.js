@@ -22,15 +22,16 @@ router.get('/:id', (req, res) => {
 // Create one people Endpoint
 // gauti duomenis is vartojo formos arba json pavidalu ir sukuri nauja partotoja tarp savo people
 router.post('/', (req, res) => {
-  console.log(' This is what was set to server in body', req.body); //{ name: 'James', surname: 'Jameson' }
+  console.log(' This is what was sent to server in body', req.body); //{ name: 'James', surname: 'Jameson' }
   // prideti nauja people objekta
+  // if (req.body.ismarried) const el = true
 
   const newPerson = {
     id: (++personId).toString(),
     name: req.body.name,
     surname: req.body.surname,
-    gender: req.body.gender,
-    isMarried: req.body.ismarried,
+    sex: req.body.gender,
+    married: req.body.ismarried,
   };
 
   people.push(newPerson);
